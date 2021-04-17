@@ -28,6 +28,26 @@ namespace VideoGameFinalProject.Controllers
             return View();
         }
 
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Console()
+        {
+            return View();
+        }
+
+        public IActionResult TheBeginning()
+        {
+            return View();
+        }
+
+        public IActionResult FutureGames()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
