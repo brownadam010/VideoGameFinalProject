@@ -15,5 +15,8 @@ namespace VideoGameFinalProject.Models
         public string GameRelease { get; set; }
         [Required(ErrorMessage = "Please enter a Game Producer")]
         public string GameProducer { get; set; }
+
+        public string Slug =>
+            GameName?.Replace(' ', '-').ToLower() + '-' + GameRelease?.ToString();
     }
 }
