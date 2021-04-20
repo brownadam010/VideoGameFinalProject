@@ -38,11 +38,6 @@ namespace VideoGameFinalProject.Controllers
             return View();
         }
 
-        public IActionResult TheBeginning()
-        {
-            return View();
-        }
-
         public IActionResult FutureGames()
         {
             return View();
