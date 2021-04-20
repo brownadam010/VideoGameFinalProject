@@ -1,6 +1,116 @@
 ﻿@{
     ViewData["Title"] = "Console Gaming";
 }
-<h1>@ViewData["Title"]</h1>
+<h1 style="background-color: #18232d; color: white;">@ViewData["Title"]</h1>
 
-<p>This is our Console Games Page.</p>
+<br />
+
+<h2>Origin of Consoles:</h2>
+
+<img src="~/images/Pong.jpg" style="height: 200px; width:200px; float: right; padding-left: 20px;" />
+<p style="font-size:large">
+    The first console ever created was the Magnavox Odyssey. The Odyssey was released in 1972 for a price of $99.95. That is the equivalent to around
+    $650 in today's money. While the Odyssey was the first console, the first console to blow up was Atari's PONG released in 1975. PONG featured
+    a game very similar to Tennis where there were two boards that the players had to move to keep the ball bouncing back and forth in play.
+</p>
+
+<br />
+<br />
+
+<h2>Evolution of Consoles</h2>
+
+<img src="~/images/Sega.webp" style="height: 200px; width:250px; float: right; padding-left: 20px;" />
+
+<p style="font-size:large">The 1980's introduced a new age of gaming. Many classics came out such as Pac-Man (1980), Mario Bros (1983) and many more. There was also
+    a shift from dedicated consoles with built in games to games being run by a cartridge. This started the Sega vs. Nintendo war with both 
+    corporations releasing consoles. the NES (Nintendo Entertainment system) and the Sega Master system. From there, the consoles went from 
+    cartridges to discs which allowed 3D graphics. </p>
+
+<br />
+<br />
+
+<h2>Xbox vs. Playstation</h2>
+
+<p style="font-size:large">Currently, the two most dominant consoles are Xbox and Playstation made by Microsoft and Sony respectfully. 
+    Sony released the first and even second console between the two in 1994. Then in 2000 Sony released the Playstation 2. Xbox, however 
+    released the original Xbox just one year later. What set this console apart was that it had online capabilites. As time went on both 
+    companies released newer versions and currently the Playstation 5 and the Xbox Series X/S are the most recent consoles to hit the market
+    with both being released in November 2020. The consoles are more powerful than they have ever been and both companies have a massive 
+    following. Sony draws customers in with console specific games such as Spider Man and God of War. Xbox draws customers in with their newly
+    released Game Pass. Game pass offers a bundle of Xbox live and hundreds of free games for a monthly fee. Some major titles that are 
+    included with the subsription include MLB The Show, Grand Theft Auto 5, Minecraft, and hundreds of others. </p>
+
+<br />
+<br />
+
+<h2>Xbox Evolution:</h2>
+<br />
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="~/images/xbox.jpg" style="width:100%">
+        <div class="text" style="text-align: Left; color: crimson">Original Xbox</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="~/images/xbox360.jpg" style="width:100%">
+        <div class="text" style="text-align: Left; color: crimson">Xbox 360</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="~/images/xbox1.jpg" style="width:100%">
+        <div class="text" style="text-align: Left; color: crimson">Xbox 1</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="~/images/xboxX.webp" style="width:100%">
+        <div class="text" style="text-align: Left; color: crimson">Xbox Series X</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+@*Slider functionality javascript*@
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
